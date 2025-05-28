@@ -13,7 +13,7 @@ header {
   background: $primary-color;
   color: $white;
   @include flex-center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 
   h1 {
     font-size: 2rem;
@@ -22,14 +22,41 @@ header {
 }
 
 main#tool-container {
-  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
   @include container;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  border-radius: 8px;
+  min-height: 400px;
+}
+.tool {
   background: $white;
   border-radius: 8px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
-  min-height: 300px;
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.1),
+    0 1.5px 4px rgba(0, 0, 0, 0.08);
+  padding: 1rem;
+  margin: 1rem;
+  max-width: 260px;
+  display: inline-block;
+  vertical-align: top;
+  transition: box-shadow 0.2s;
+}
+
+.tool img {
+  display: block;
+  margin: 0 auto 0.5rem auto;
+  max-width: 80px;
+  height: auto;
+}
+
+.tool:hover {
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.15),
+    0 3px 8px rgba(0, 0, 0, 0.12);
 }
 
 footer {
