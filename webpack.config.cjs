@@ -23,7 +23,7 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.js'],
   },
-   plugins: [
+  plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',
     }),
