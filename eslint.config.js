@@ -8,7 +8,7 @@ export default [
   js.configs.recommended,
   prettierConfig,
   {
-    ignores: ["dist/**", "node_modules/**", "**/*.test.*", "**/__tests__/**"], // Ignore test files and folders
+    ignores: ["dist/**", "node_modules/**", "**/*.test.*", "**/__tests__/**"], 
   },
   {
     files: ['**/*.ts', '**/*.tsx'],
