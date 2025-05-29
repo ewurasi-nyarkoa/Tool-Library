@@ -23,14 +23,11 @@ header {
 
 main#tool-container {
   display: flex;
+   flex: 1;
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
   @include container;
-  //   margin-top: 2rem;
-  //   margin-bottom: 2rem;
-  //   border-radius: 8px;
-  //   min-height: 400px;
 }
 .tool {
   background: $white;
@@ -44,6 +41,15 @@ main#tool-container {
   display: inline-block;
   vertical-align: top;
   transition: box-shadow 0.2s;
+}
+.tool img {
+  display: block;
+  margin: 0 auto 0.5rem auto;
+  max-width: 80px;
+  max-height: 80px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
 }
 
 .tool:hover {
@@ -61,7 +67,7 @@ footer {
   letter-spacing: 1px;
 }
 
-// Add this to your main SCSS file or create _dark.scss and import it
+
 
 [data-theme='dark'] {
   html,
@@ -83,8 +89,8 @@ footer {
 
   main#tool-container {
     background: $dark-secondary-color;
-    // border-radius: 8px;
-  }
+   
+    }
 
   .tool {
     background: $dark-white;

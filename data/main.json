@@ -2,33 +2,37 @@
   {
     "id": 1,
     "name": "Webpack",
-    "description": "A static module bundler for modern JavaScript applications."
+    "description": "A static module bundler for modern JavaScript applications.",
+    "image": "https://raw.githubusercontent.com/webpack/media/master/logo/icon-square-big.png"
   },
   {
     "id": 2,
     "name": "Gulp",
-    "description": "A toolkit for automating painful or time-consuming tasks in your development workflow."
+    "description": "A toolkit for automating painful or time-consuming tasks in your development workflow.",
+    "image": "https://raw.githubusercontent.com/gulpjs/artwork/master/gulp-2x.png"
   },
   {
     "id": 3,
     "name": "Grunt",
-    "description": "A JavaScript task runner, used to automate repetitive tasks like minification, compilation, and unit testing."
+    "description": "A JavaScript task runner, used to automate repetitive tasks like minification, compilation, and unit testing.",
+    "image": "https://gruntjs.com/img/grunt-logo-no-wordmark.svg"
   },
   {
     "id": 4,
-    "name": "Parcel",
-    "description": "A zero configuration web application bundler."
+    "name": "Vite",
+    "description": "Next Generation Frontend Tooling - A build tool that aims to provide a faster and leaner development experience for modern web projects.",
+    "image": "https://vitejs.dev/logo.svg"
   },
   {
     "id": 5,
     "name": "Rollup",
-    "description": "A module bundler for JavaScript which compiles small pieces of code into something larger and more complex."
-   
+    "description": "A module bundler for JavaScript which compiles small pieces of code into something larger and more complex.",
+    "image": "https://rollupjs.org/rollup-logo.svg"
   },
   {
     "id": 6,
     "name": "Babel",
-    "description": "A JavaScript compiler that lets you use next generation JavaScript, today."
-
+    "description": "A JavaScript compiler that lets you use next generation JavaScript, today.",
+    "image": "https://babeljs.io/img/babel.svg"
   }
 ]

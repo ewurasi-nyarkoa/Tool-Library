@@ -1,5 +1,5 @@
+// ... existing code ...
 import './styles/main.scss';
-import moment from 'moment';
 import tools from '../data/main.json';
 
 interface Tool {
@@ -9,7 +9,6 @@ interface Tool {
   image?: string;
 }
 
-// Add current date and time to header
 const header =
   document.querySelector('header') || document.createElement('header');
 if (!document.querySelector('header')) {
@@ -18,10 +17,22 @@ if (!document.querySelector('header')) {
 
 const dateTimeElement = document.createElement('div');
 dateTimeElement.className = 'datetime-display';
-dateTimeElement.innerHTML = moment().format('MMMM Do YYYY, h:mm:ss a');
+
+
+const loadMoment = async () => {
+  try {
+    const moment = await import('moment');
+    dateTimeElement.innerHTML = moment.default().format('MMMM Do YYYY, h:mm:ss a');
+  } catch (error) {
+    console.error('Failed to load moment:', error);
+    dateTimeElement.innerHTML = new Date().toLocaleString();
+  }
+};
+
+loadMoment();
 header.appendChild(dateTimeElement);
 
-// Add dark/light mode toggle button
+
 const toggleBtn = document.createElement('button');
 toggleBtn.textContent = 'Toggle Theme';
 toggleBtn.className = 'toggle-theme-btn';
@@ -44,11 +55,11 @@ toggleBtn.addEventListener('click', () => {
   }
 });
 
-// Set initial theme from localStorage or default to light
+
 const savedTheme = localStorage.getItem('theme') || 'light';
 document.body.setAttribute('data-theme', savedTheme);
 
-// If your JSON is an array of tools
+
 const main = document.getElementById('tool-container');
 if (main) {
   (tools as Tool[]).forEach((tool) => {
