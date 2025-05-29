@@ -1,4 +1,4 @@
-// ... existing code ...
+
 import './styles/main.scss';
 import tools from '../data/main.json';
 
