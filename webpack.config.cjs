@@ -19,7 +19,8 @@ module.exports = {
   module: {
     rules: [
       { test: /\.ts$/, use: 'ts-loader', exclude: /node_modules/ },
-      { test: /\.scss$/, use: ['style-loader', 'css-loader', 'sass-loader'] }
+      { test: /\.s?css$/,use: [ 'style-loader','css-loader',{loader:'sass-loader',options: { sourceMap: true }}
+  ] }
     ]
   },
   resolve: {

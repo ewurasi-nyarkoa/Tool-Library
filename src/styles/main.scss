@@ -12,7 +12,7 @@ header {
   height: $header-height;
   background: $primary-color;
   color: $white;
-  @include flex-center;
+  @include flex-space;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 
   h1 {
@@ -27,10 +27,10 @@ main#tool-container {
   gap: 1rem;
   justify-content: center;
   @include container;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  border-radius: 8px;
-  min-height: 400px;
+  //   margin-top: 2rem;
+  //   margin-bottom: 2rem;
+  //   border-radius: 8px;
+  //   min-height: 400px;
 }
 .tool {
   background: $white;
@@ -46,13 +46,6 @@ main#tool-container {
   transition: box-shadow 0.2s;
 }
 
-.tool img {
-  display: block;
-  margin: 0 auto 0.5rem auto;
-  max-width: 80px;
-  height: auto;
-}
-
 .tool:hover {
   box-shadow:
     0 4px 16px rgba(0, 0, 0, 0.15),
@@ -66,4 +59,54 @@ footer {
   @include flex-center;
   font-size: 1rem;
   letter-spacing: 1px;
+}
+
+// Add this to your main SCSS file or create _dark.scss and import it
+
+[data-theme='dark'] {
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: $dark-secondary-color;
+    color: $dark-text-color;
+    font-family: $dark-font-stack;
+  }
+
+  header {
+    background: $dark-primary-color;
+
+    color: $dark-white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  }
+
+  main#tool-container {
+    background: $dark-secondary-color;
+    // border-radius: 8px;
+  }
+
+  .tool {
+    background: $dark-white;
+    color: $dark-primary-color;
+    box-shadow:
+      0 2px 8px rgba(0, 0, 0, 0.25),
+      0 1.5px 4px rgba(0, 0, 0, 0.18);
+    transition: box-shadow 0.2s;
+  }
+
+  .tool:hover {
+    box-shadow:
+      0 4px 16px rgba(0, 0, 0, 0.35),
+      0 3px 8px rgba(0, 0, 0, 0.22);
+  }
+
+  a {
+    color: $dark-accent-color;
+  }
+
+  footer {
+    background: $dark-footer-bg;
+    color: $dark-footer-text;
+  }
 }
