@@ -18,6 +18,11 @@ export default [
         project: './tsconfig.json',
         tsconfigRootDir: process.cwd(),
       },
+      globals: {
+      process: 'readonly',
+      __dirname: 'readonly',
+      document: 'readonly'
+    }
     },
     plugins: {
       '@typescript-eslint': plugin,
