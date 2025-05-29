@@ -6,9 +6,9 @@ import prettierConfig from 'eslint-config-prettier';
 
 export default [
   js.configs.recommended,
-  prettierConfig, 
+  prettierConfig,
   {
-    ignores: ["dist/**", "node_modules/**"],
+    ignores: ["dist/**", "node_modules/**", "**/*.test.*", "**/__tests__/**"], // Ignore test files and folders
   },
   {
     files: ['**/*.ts', '**/*.tsx'],
@@ -19,10 +19,12 @@ export default [
         tsconfigRootDir: process.cwd(),
       },
       globals: {
-      process: 'readonly',
-      __dirname: 'readonly',
-      document: 'readonly'
-    }
+        process: 'readonly',
+        __dirname: 'readonly',
+        document: 'readonly',
+        localStorage: 'readonly',
+        window: 'readonly',
+      }
     },
     plugins: {
       '@typescript-eslint': plugin,
@@ -30,9 +32,7 @@ export default [
     },
     rules: {
       'no-console': 'warn',
-      'no-unused-vars': 'warn',
-      '@typescript-eslint/no-unused-vars': 'warn',
-      'prettier/prettier': 'error', 
+      'prettier/prettier': 'error',
     },
   },
 ];
